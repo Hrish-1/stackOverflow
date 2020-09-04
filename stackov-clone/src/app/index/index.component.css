@@ -12,14 +12,6 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-li a{
-    color: black;
-    font-weight: bold;
-}
-
-.nav-item a{
-    color: black;
-}
-.ml-auto a{
-    color: white;
+::placeholder{
+    color: whitesmoke;
 }

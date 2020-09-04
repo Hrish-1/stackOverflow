@@ -9,7 +9,7 @@
         </div>
         <div *ngFor = "let items of taskList" class="card col-8 d-flex flex-column" style="margin: 7px;">
           <div class="card-body">
-            <h5 class="card-title mt-3">Q : <span> <a routerLink="/answer" style = "text-decoration: none;color:black;"(click)="getQid(items.qid)">{{items.ques}}</a></span> </h5>
+            <h5 class="card-title mt-3">Q : <span> <a routerLink="/answer" style = "text-decoration: none;color:black;"(click)="getQid(items.qid,items.ques)">{{items.ques}}</a></span> </h5>
             <!-- <p class="card-text mt-4">Authentically serve our customers by empowering, listening and collaborating with our fellow Stackers.</p> -->
             <span style="margin-left: .5rem;"><a style="margin-right: .5rem; font-size: 1rem; color: black;"><fa-icon [icon]="like"></fa-icon></a> <span>1</span></span>
             <span style="margin-left: 3rem;"><a style="margin-right: .5rem; font-size: 1rem; color: black;"><fa-icon [icon]="dislike"></fa-icon></a> <span>1</span></span>

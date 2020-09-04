@@ -29,7 +29,7 @@ import { faWindows } from '@fortawesome/free-brands-svg-icons';
 })
 export class AnswerComponent implements OnInit {
 
-  
+  q = sessionStorage.qvalue;  
   constructor( 
     private fb: FormBuilder,
     private router: Router,
@@ -51,7 +51,7 @@ public fbFormGroup = this.fb.group({
   }
 
   list :any = [];
-  qlist: any = [];
+  //qlist: any = [];
   s = sessionStorage.emailid;
 
   async addans(){
@@ -81,7 +81,7 @@ public fbFormGroup = this.fb.group({
         this.list.push(result.output[i]);
       }
       console.log(this.list[0].ques);
-      this.qlist.push(this.list[0].ques);
+     // this.qlist.push(this.list[0].ques);
         this.uiInvalidCredential = true;
     }catch(err){
         this.router.navigate(['error']);

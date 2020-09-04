@@ -69,8 +69,9 @@ export class BrowseComponent implements OnInit {
     //   centered: true,
     // });
   }
-  getQid(data){
-    sessionStorage.setItem('value',data);
+  getQid(idata,qdata){
+    sessionStorage.setItem('value',idata);
+    sessionStorage.setItem('qvalue',qdata);
     console.log(sessionStorage.value); 
   }
 }
