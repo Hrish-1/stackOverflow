@@ -1,26 +1,31 @@
 <div class="modal-header">
-    <h4 class="modal-title">Hi there!</h4>
-    <button
-      type="button"
-      class="close"
-      style="outline: none;"
-      aria-label="Close"
-      (click)="activeModal.dismiss('Cross click')"
-    >
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  
-  <div class="modal-body">
-    <p>Hello, Do you want to log out!</p>
-  </div>
-  
-  <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="logOutAndClose()">
-      Email Sent
-    </button>
-    <button type="button" class="btn btn-outline-dark" (click)="closeTheModal()">
-      Close
-    </button>
-  </div>
-  
+  <h4 class="modal-title">Hi there!</h4>
+  <button
+    type="button"
+    class="close"
+    style="outline: none;"
+    aria-label="Close"
+    (click)="activeModal.dismiss('Cross click')"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="modal-body">
+
+  <form>
+    <div class="form-group">
+      <h5>Reset your password</h5>
+      <input type="email" class="form-control" id="Email Id">
+      <label for="message-text" class="col-form-label">Enter your user account's verified email address and we will send you a password reset link.</label>
+    </div>
+    
+  </form>
+
+</div>
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="logOutAndClose()">
+    send password reset mail
+  </button>
+</div>

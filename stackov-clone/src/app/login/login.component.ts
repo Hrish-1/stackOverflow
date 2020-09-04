@@ -52,6 +52,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['browse']);
     } else {
       this.uiInvalidCredential = true;
+      alert("Invalid Email or password");
     }
   }
 }

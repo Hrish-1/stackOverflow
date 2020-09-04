@@ -9,6 +9,7 @@ import { BrowseComponent } from './browse/browse.component';
 import { QuestionComponent } from './question/question.component';
 import { AnswerComponent } from './answer/answer.component';
 import {ForgotComponent} from './forgot/forgot.component';
+import {ErrorComponent} from './error/error.component';
 const routes: Routes = [
   {path:'login' , component : LoginComponent},
   {path:'signup' , component : SignupComponent},

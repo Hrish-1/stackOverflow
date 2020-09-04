@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AnswerComponent } from './answer/answer.component';
 import { LogoutIndexComponent } from './logout-index/logout-index.component';
 import { LogoutComponent } from './logout/logout.component';
+import { ErrorComponent } from './error/error.component';
 
 
 
@@ -32,7 +33,8 @@ import { LogoutComponent } from './logout/logout.component';
     QuestionComponent,
     AnswerComponent,
     LogoutIndexComponent,
-    LogoutComponent
+    LogoutComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

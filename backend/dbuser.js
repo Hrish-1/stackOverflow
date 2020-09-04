@@ -44,6 +44,7 @@ let authenticateUser = async (input) => {
 };
 let addquestion = async (input) => {
   const connection = mysql.createConnection(DB_CONFIG);
+  try{
   await connection.connectAsync();
 
   let sql = "insert into Question(ques,description) values(?,?)";
@@ -53,7 +54,9 @@ let addquestion = async (input) => {
   ]);
 
   await connection.endAsync();
-
+  }catch(err){
+    console.log("can't add question");
+  }
   if (results.length === 0) {
     throw new Error("Invalid Credentials");
   }

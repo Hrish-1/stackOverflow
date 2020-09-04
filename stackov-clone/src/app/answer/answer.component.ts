@@ -20,6 +20,7 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, Validators, MinLengthValidator} from '@angular/forms';
+import { faWindows } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-answer',
@@ -51,6 +52,7 @@ public fbFormGroup = this.fb.group({
 
   list :any = [];
   qlist: any = [];
+  s = sessionStorage.emailid;
 
   async addans(){
     const data = [this.fbFormGroup.value,sessionStorage.value];
@@ -60,7 +62,7 @@ public fbFormGroup = this.fb.group({
     try{
       const url = 'http://localhost:3000/add-ans';
       const result: any = await this.http.post(url, data).toPromise();
-        this.router.navigate(['browse']); 
+        location.reload(); 
         this.uiInvalidCredential = true;
     }catch(err){
         this.router.navigate(['error']);

@@ -16,7 +16,7 @@
 
 
       <div class = "w-50 d-flex col-12 col-md-6 align-items-center justify-content-center">
-          <form action="#"  class = "d-flex flex-column align-items-center" [formGroup]="fbFormGroup">
+          <form action="#"  class = "was-validated d-flex flex-column align-items-center" method = "POST" [formGroup]="fbFormGroup">
             <h2 style = "font-weight:bold; margin : 0;" id="head">Sign in</h2>
             <div class = "icons-container my-3 d-flex justify-content-center">
                 
@@ -31,8 +31,9 @@
                   ></fa-icon></a>
                 </div>
             <span style = "font-size : 12px">or use your account</span>
-            <input type="email" class = "form-control"  placeholder="Email" formControlName="email" class = "w-100"/>
-            <input type="password" class = "form-control" placeholder="Password" formControlName="passw" class = "w-100" /> <br>
+            <input type="email" class = "form-control"  placeholder="Email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" maxlength="50" minlength="6"
+            required formControlName="email" class = "w-100"/>
+            <input type="password"  placeholder="Password"  formControlName="passw" requiredclass = "w-100" /> <br>
             <a (click) = "forgotpass()"><span style = "font-size : 12px">Forgot your password</span></a>
             <div class="row align-items-center justify-content-center mt-2"> <button
                class="btn btn-outline-secondary btn-block" 
