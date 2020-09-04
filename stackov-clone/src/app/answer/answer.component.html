@@ -1,0 +1,53 @@
+<app-logout-index></app-logout-index>
+<div class="container-fluid">
+    <!-- Already Answerd-->
+  
+    <div class="row justify-content-center d-flex" style="margin-top: 2.5rem;">
+        <div class="col-1 h5 justify-content-end">Question: </div>
+        <div *ngFor = "let it of qlist"class="col-9 justify-content-start" style="font-size: 1.3rem;">{{it}}</div>
+
+       <div class="col-8 mt-4 ans">
+            <div *ngFor = "let items of list" class="card-body">
+                <div class="card row">
+                         <div class="card-text m-2 row align-items-center"> {{items.ans}} </div>
+                </div>
+                <div class="row justify-content-between mt-2 mr-2 h6">
+                    <div class="col">
+                        <div class="row">
+                            <p style="margin-left: .5rem;"><a style="margin-right: .2rem; font-size: .9rem; color: black;"><fa-icon [icon]="like"></fa-icon></a> <span>1</span></p>
+                            <p style="margin-left: 1.2rem;"><a style="margin-right: .2rem; font-size: .9rem; color: black;"><fa-icon [icon]="dislike"></fa-icon></a> <span>1</span></p>       
+                            <p style="margin-left: 1.2rem;"><a style="margin-right: .2rem; font-size: .9rem; color: black;">Edit</a></p>       
+
+                        </div>
+                    </div>
+                    <div class="row">@gmail</div>
+                </div>
+            </div>
+            
+        </div>
+
+            
+    </div>
+
+
+
+    <!-- already answered end-->    
+
+    <!-- Answer Block-->
+    <div class="row justify-content-center" routerLink="/answer " style="margin-top: 1.5rem;">
+        <div class="col-8" style="margin: 7px;">
+            <div class="card-body">
+              <h5 class="card-title mt-3">Your Answer</h5>
+              <form [formGroup]= "fbFormGroup">
+                
+                <div class="form-group">
+                  <textarea formControlName="ans" class="form-control" id="exampleFormControlTextarea1" rows="7"></textarea>
+                </div>
+                <button type="submit" class="btn ml-2 btn-outline-dark" (click)="addans()">Post</button>
+              </form>
+            </div>
+        </div>
+
+      </div>
+</div>
+

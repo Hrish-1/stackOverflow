@@ -1,0 +1,46 @@
+<app-index></app-index>
+
+
+<div class = "d-flex align-items-center justify-content-center" id="body" style = "height : 100vh;">
+
+    
+    <div class = "container-fluid col-12 col-md-7 d-flex flex-wrap h-75 p-0">
+      
+      <div class = "overlay-container col-12 col-md-6 w-50 d-flex align-items-center justify-content-center">
+        <div style= "text-align: center;">
+          <h1>Hello, Friend!</h1>
+          <p>Enter your personal details and start journey with us </p>
+          <a routerLink="/signup"><button class = "btn btn-outline-light obtn">Sign Up</button></a>
+        </div>
+      </div>
+
+
+      <div class = "w-50 d-flex col-12 col-md-6 align-items-center justify-content-center">
+          <form action="#"  class = "d-flex flex-column align-items-center" [formGroup]="fbFormGroup">
+            <h2 style = "font-weight:bold; margin : 0;" id="head">Sign in</h2>
+            <div class = "icons-container my-3 d-flex justify-content-center">
+                
+                <a href="#"><fa-icon
+                    [icon]="facebook"
+                  ></fa-icon></a>
+                  <a href="#"><fa-icon
+                    [icon]="google"
+                  ></fa-icon></a>
+                  <a href="#"><fa-icon
+                    [icon]="linkdin"
+                  ></fa-icon></a>
+                </div>
+            <span style = "font-size : 12px">or use your account</span>
+            <input type="email" class = "form-control"  placeholder="Email" formControlName="email" class = "w-100"/>
+            <input type="password" class = "form-control" placeholder="Password" formControlName="passw" class = "w-100" /> <br>
+            <a (click) = "forgotpass()"><span style = "font-size : 12px">Forgot your password</span></a>
+            <div class="row align-items-center justify-content-center mt-2"> <button
+               class="btn btn-outline-secondary btn-block" 
+               (click)="loginProcessHere()" 
+              style="width: 8rem; border-radius: 2rem;">Sign in</button></div>
+          </form>
+      </div>
+    </div>
+</div>
+
+//[disabled]="!fbFormGroup.valid"

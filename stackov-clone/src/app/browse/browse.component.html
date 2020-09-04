@@ -1,0 +1,52 @@
+<app-index></app-index>
+<div class="container-fluid">
+    <div class="row flex-column align-items-center" style="margin-top: 2.5rem;">
+
+        <div class="col-8 d-flex justify-content-between align-items-center">
+            <div class="col h2">Top Questions ?</div>
+            <div class=" col btn btn-block bg-dark text-light h2 btn-sm" (click)="processQuestion()"><a class="nav-link text-light h5" >Have Question?</a>
+            </div>
+        </div>
+        <div *ngFor = "let items of taskList" class="card col-8 d-flex flex-column" style="margin: 7px;">
+          <div class="card-body">
+            <h5 class="card-title mt-3">Q : <span> <a routerLink="/answer" style = "text-decoration: none;color:black;"(click)="getQid(items.qid)">{{items.ques}}</a></span> </h5>
+            <!-- <p class="card-text mt-4">Authentically serve our customers by empowering, listening and collaborating with our fellow Stackers.</p> -->
+            <span style="margin-left: .5rem;"><a style="margin-right: .5rem; font-size: 1rem; color: black;"><fa-icon [icon]="like"></fa-icon></a> <span>1</span></span>
+            <span style="margin-left: 3rem;"><a style="margin-right: .5rem; font-size: 1rem; color: black;"><fa-icon [icon]="dislike"></fa-icon></a> <span>1</span></span>
+          </div>
+      </div>
+      </div>
+</div>
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<app-index></app-index>
+<div class="container-fluid">
+    <div class="row justify-content-center" style="margin-top: 2.5rem;">
+
+        <div class="col-8 d-flex justify-content-between align-items-center">
+            <div class="col h2">Top Questions ?</div>
+            <div class=" col btn btn-block bg-dark text-light h2 btn-sm" routerLink="/question" ><a class="nav-link text-light h6"  routerLink="/question">Have Question?</a>
+            </div>
+        </div>
+        <div *ngFor = "let items of taskList" class="card col-8" style="margin: 7px; height: 7rem;">
+            <div class="card-body" style=" height: 7rem;" >
+              <h5 class="card-title">Q : <span> <a routerLink="/answer" style="color: black;">{{items}}</a></span> </h5>
+              <div class="card-text mt-4 ml-2 row align-items-center">
+               <p style="margin-left: .5rem;"><a style="margin-right: .5rem; font-size: 1rem; color: black;"><fa-icon [icon]="like"></fa-icon></a> <span>1</span></p>
+               <p style="margin-left: 3rem;"><a style="margin-right: .5rem; font-size: 1rem; color: black;"><fa-icon [icon]="dislike"></fa-icon></a> <span>1</span></p>
+              </div>
+            </div>
+        </div>
+      </div>
+</div>
+<router-outlet></router-outlet> -->

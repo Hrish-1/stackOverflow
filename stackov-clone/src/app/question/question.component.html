@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="row justify-content-center" routerLink="/answer " style="margin-top: 2.5rem;">
+        <div class="card col-8" style="margin: 7px;">
+            <div class="card-body">
+              <h5 class="card-title mt-3">Question</h5>
+              <form [formGroup]= "fbFormGroup">
+                <div class="form-group">
+                  <label for="examplequestion">Title of your Question</label>
+                  <input type="text" class="form-control h4" formControlName="ques" id="form-text"aria-describedby="emailHelp" placeholder="Question Here">
+                  <small id="emailHelp" class="form-text text-muted"></small>
+                </div>
+                <div class="form-group">
+                  <label for="examoleText">Discription</label>
+                  <textarea class="form-control" formControlName="description" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1" >Notyfy me when someone post answer.</label>
+                </div>
+                <button type="submit" class="btn btn-outline-dark" (click)="addques()">Post</button>
+              </form>
+            </div>
+        </div>
+
+      </div>
+</div>

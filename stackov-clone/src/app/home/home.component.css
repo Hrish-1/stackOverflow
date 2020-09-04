@@ -1,0 +1,7 @@
+
+.container-fluid{
+    background-image: linear-gradient(to right,rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('/assets/singup.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
