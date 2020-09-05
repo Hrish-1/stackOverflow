@@ -106,6 +106,19 @@ let getans = async (input) => {
      console.log("can't insert into answer");
     }
 }
+let rmans = async (input) => {
+  try{
+    const connection = mysql.createConnection(DB_CONFIG);
+    await connection.connectAsync();
+  
+    let sql = "delete from answer where aid = ?";
+    const results = await connection.queryAsync(sql,[input]);
+    return results;
+    await connection.endAsync();
+    
+    }catch(err){
+     console.log("can't delete from answer");
+    }
+}
 
-
-module.exports = { addUser, authenticateUser,addquestion,getquestion,addans,getans};
+module.exports = { addUser, authenticateUser,addquestion,getquestion,addans,getans,rmans};

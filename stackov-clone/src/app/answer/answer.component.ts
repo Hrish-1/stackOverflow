@@ -21,6 +21,7 @@ import { HttpClient } from '@angular/common/http';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, Validators, MinLengthValidator} from '@angular/forms';
 import { faWindows } from '@fortawesome/free-brands-svg-icons';
+import {NgModule} from '@angular/core'; 
 
 @Component({
   selector: 'app-answer',
@@ -90,6 +91,15 @@ public fbFormGroup = this.fb.group({
       this.router.navigate(['login']);
     }
  }
-
+ async rmItem(){
+   const data = [sessionStorage.value];
+   try{
+    const url = "http://localhost:3000/del-Item";
+    const result: any = await this.http.post(url,data).toPromise();
+    console.log(result);
+   }catch(err){
+     console.log("can't delete");
+   }
+ }
 }
 

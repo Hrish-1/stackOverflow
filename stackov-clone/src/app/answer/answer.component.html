@@ -7,7 +7,7 @@
         <div class="col-9 justify-content-start" style="font-size: 1.3rem;">{{q}}</div>
 
        <div class="col-8 mt-4 ans">
-            <div *ngFor = "let items of list" class="card-body">
+            <div *ngFor = "let items of list" class="card-body" #myElement>
                 <div class="card row">
                          <div class="card-text m-2 row align-items-center"> {{items.ans}} </div>
                 </div>
@@ -16,7 +16,8 @@
                         <div class="row">
                             <p style="margin-left: .5rem;"><a style="margin-right: .2rem; font-size: .9rem; color: black;"><fa-icon [icon]="like"></fa-icon></a> <span>1</span></p>
                             <p style="margin-left: 1.2rem;"><a style="margin-right: .2rem; font-size: .9rem; color: black;"><fa-icon [icon]="dislike"></fa-icon></a> <span>1</span></p>       
-                            <p style="margin-left: 1.2rem;"><a style="margin-right: .2rem; font-size: .9rem; color: black;">Edit</a></p>       
+                            <p style="margin-left: 1.2rem;"><a style="margin-right: .2rem; font-size: .9rem; color: black;"(click)="myElement.remove()" (click) = "rmItem()">Delete</a></p>
+                           
 
                         </div>
                     </div>

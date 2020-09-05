@@ -102,4 +102,16 @@ app.post("/get-ans", async(req,res) => {
   }
 });
 
+app.post("/del-Item", async(req,res)=>{
+  try{
+    const input = req.body;
+    console.log("del");
+    console.log(input);
+    let output = await dbadduser.rmans(input);
+    console.log(output);
+  }catch(err){
+    res.json({message : "unsuccessful"})
+  }
+});
+
 app.listen(3000);
